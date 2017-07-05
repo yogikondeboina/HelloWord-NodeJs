@@ -13,7 +13,7 @@ http.createServer(function (req,res) {
             if(err) {
                 console.log(err);
                 res.writeHead(200, {'Content-Type':'text-plain'});
-                res.end("Sorry, Burningbird isn't around right now. Please try again later \n");
+                res.end("Sorry, Burningbird isn't around right now. \n");
             } else {
                 var img = fs.readFileSync(file);
                 res.contentType = 'image/png';
