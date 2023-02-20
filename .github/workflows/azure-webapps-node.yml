@@ -34,12 +34,13 @@ jobs:
       run: |
         npm install -g @angular/cli@latest
         npm install -f
+
+    - name: 'ng build'
+      run: | 
+              ng build -c=ppd --localize
         
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
-      with:
-        name: node-app
-        path: .
+      run: zip -r dist.zip dist
 
   # deploy:
   #   permissions:
