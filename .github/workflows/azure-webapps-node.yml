@@ -41,8 +41,10 @@ jobs:
         name: node-app
         path: .
 
-    - name: 
-      run: ls -al
+    - name: test folder
+      run: | 
+        ls -al
+        Pwd
 
     - name: uplode to blob storage
       uses: azure/cli@v1
