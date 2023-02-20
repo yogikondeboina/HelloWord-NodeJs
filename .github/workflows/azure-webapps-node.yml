@@ -43,8 +43,7 @@ jobs:
 
     - name: test folder
       run: | 
-        ls -al
-        Pwd
+        ls -al/pwd
 
     - name: uplode to blob storage
       uses: azure/cli@v1
